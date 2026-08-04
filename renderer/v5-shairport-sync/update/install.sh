@@ -23,7 +23,7 @@
 
 # 1: Plugin name and update date
 PLUGIN_NAME=$1
-PLUGIN_UPDATE_DATE="2026-05-13"
+PLUGIN_UPDATE_DATE="2026-08-03"
 
 # 2: Initialize the step counter
 STEP=0
