@@ -97,7 +97,7 @@ fi
 STEP=$((STEP + 1))
 message_log "** Step $STEP-$TOTAL_STEPS: Clone package repo"
 rm -rf $WD/pkgbuild
-git clone --depth 1 https://github.com/moode-player/pkgbuild.git
+git clone --depth 1 -b contrib/qbzd-build-recipe https://github.com/Gjuju/pkgbuildx86.git pkgbuild
 if [ $? -ne 0 ]; then
 	cancel_update "** Clone failed"
 fi
