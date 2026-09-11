@@ -118,6 +118,9 @@ if [ $? -ne 0 ]; then
 fi
 message_log "** - Installing $PACKAGE"
 cp "$WD/pkgbuild/packages/$PACKAGE/dist/binary/$PACKAGE_DEB" /tmp/
+if [ $? -ne 0 ]; then
+	cancel_update "** Built package not found"
+fi
 apt -y --allow-change-held-packages install /tmp/$PACKAGE_DEB
 if [ $? -ne 0 ]; then
 	cancel_update "** Install failed"
